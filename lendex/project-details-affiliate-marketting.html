@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lendex - Personal Portfolio Bootstrap Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS
+    ============================================ -->
+
+    <!-- Vendor CSS (Contain Bootstrap, Icon Fonts) -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/icofont.min.css" /> -->
+
+    <!-- Plugin CSS (Global Plugins Files) -->
+    <!-- <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/venobox.min.css" /> -->
+
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    
+    <!-- Minify Version -->
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+</head>
+
+<body>
+
+    <main class="main-wrapper">
+        <!-- .....:::::: Start Header Section :::::.... -->
+        <header class="header-section sticky-header d-none d-lg-block">
+            <div class="header-wrapper">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <!-- Start Header Logo -->
+                            <a href="index.html" class="header-logo">
+                                <img src="assets/images/logo/logo.png" alt="">
+                            </a>
+                            <!-- End Header Logo -->
+                        </div>
+                        <div class="col-auto">
+                            <!-- Start Header Menu -->
+                            <ul class="header-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="has-dropdown">
+                                    <a href="service-list.html">Service</a>
+                                    <ul class="submenu">
+                                        <li><a href="service-list.html">Services</a></li>
+                                        <li><a href="service-details.html">Service Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="blog-list.html">Blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="blog-list.html">Blog List Full Width</a></li>
+                                        <li><a href="blog-list-sidebar-left.html">Blog List Left Sidebar</a></li>
+                                        <li><a href="blog-list-sidebar-right.html">Blog List Right Sidebar</a></li>
+                                        <li><a href="blog-details.html">Blog Details Full Width</a></li>
+                                        <li><a href="blog-details-sidebar-left.html">Blog Details Left Sidebar</a></li>
+                                        <li><a href="blog-details-sidebar-right.html">Blog Details Right Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="project-details.html#">Pages</a>
+                                    <ul class="submenu">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="project-list.html">Project</a></li>
+                                    <li><a href="project-details.html">Project Details</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="404-page.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                            <!-- End Header Menu -->
+                        </div>
+                        <div class="col">
+                            <div class="header-btn-link text-end">
+                               <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Hire Me <i class="icofont-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- .....:::::: End Header Section :::::.... -->
+
+        <!-- .....:::::: Start Mobile Header Section :::::.... -->
+        <div class="mobile-header d-block d-lg-none">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col">
+                        <div class="mobile-logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mobile-action-link text-end">
+                            <a href="project-details.html#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu"><i class="icofont-navigation-menu"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .....:::::: Start MobileHeader Section :::::.... -->
+
+        <!--  Start Offcanvas Mobile Menu Section -->
+        <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+            <!-- Start Offcanvas Header -->
+            <div class="offcanvas-header text-right">
+                <button class="offcanvas-close"><i class="icofont-close-line"></i></button>
+            </div> <!-- End Offcanvas Header -->
+            <!-- Start Offcanvas Mobile Menu Wrapper -->
+            <div class="offcanvas-mobile-menu-wrapper">
+                <!-- Start Mobile Menu  -->
+                <div class="mobile-menu-bottom">
+                    <!-- Start Mobile Menu Nav -->
+                    <div class="offcanvas-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html"><span>Home</span></a>
+                            </li>
+                            <li>
+                                <a href="project-details.html#"><span>Services</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="service-list.html">Service List</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="project-details.html#"><span>Blog</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="blog-list.html">Blog List Full Width</a></li>
+                                    <li><a href="blog-list-sidebar-left.html">Blog List Left Sidebar</a></li>
+                                    <li><a href="blog-list-sidebar-right.html">Blog List Right Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details Full Width</a></li>
+                                    <li><a href="blog-details-sidebar-left.html">Blog Details Left Sidebar</a></li>
+                                    <li><a href="blog-details-sidebar-right.html">Blog Details Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="project-details.html#"><span>Pages</span></a>
+                                <ul class="mobile-sub-menu">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="project-list.html">Project</a></li>
+                                    <li><a href="project-details.html">Project Details</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="404-page.html">404 Page</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.html"><span>Contact</span></a>
+                            </li>
+                        </ul>
+                    </div> <!-- End Mobile Menu Nav -->
+                </div> <!-- End Mobile Menu -->
+
+                <!-- Start Mobile contact Info -->
+                <div class="mobile-contact-info text-center">
+                    <ul class="social-link">
+                        <li><a target="_blank" href="https://example.com"><i class="icofont-facebook"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://example.com"><i class="icofont-twitter"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://example.com"><i class="icofont-skype"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End Mobile contact Info -->
+
+            </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+        </div>
+        <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+        <!-- Offcanvas Overlay -->
+        <div class="offcanvas-overlay"></div>
+
+        <!-- ...::: Start Breadcrumb Section :::... -->
+        <div class="breadcrumb-section section-bg overflow-hidden pos-relative">
+            <div class="breadcrumb-shape-top-left"></div>
+            <div class="breadcrumb-shape-bottom-right"></div>
+            <div class="breadcrumb-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-content">
+                                <h2 class="title">Project Details</h2>
+                                <ul class="breadcrumb-link">
+                                    <li><a href="service-list.html">Projects</a></li>
+                                    <li class="active" aria-current="page">Project Details</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Breadcrumb Section :::... -->
+
+        <!-- .....:::::: Start Project Details Section :::::.... -->
+        <div class="project-details-section section-gap-tb-165">
+            <div class="project-details-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Start Project Content Section -->
+                            <div class="project-content-section pos-relative">
+                                <div class="project-hero-image">
+                                    <img src="assets/images/project/project-details-affiliate-marketting.png" alt="" style="height: 151%;">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <!-- Start Section Content -->
+                                        <div class="default-content-style pos-relative">
+                                            <span class="section-tag">Affiliate Marketting</span>
+                                            <h2 class="title">Website Affiliate Marketting.</h2>
+                                            <p>An Affiliate Marketing website is an online platform designed to create business opportunities for 
+                                                online marketers. This form of marketing is based on your participation in an affiliate program 
+                                                with another company or seller of products/services (the seller). When you join an affiliate program, 
+                                                you will be provided with a special link containing a unique tracking code.</p>
+
+                                            <p>When users visit your website and click on that affiliate link, they will be redirected to the seller's 
+                                                website. If they perform a specific action such as making a purchase or signing up for a service, 
+                                                you will receive a commission or a percentage of the sales volume they generated through your link. 
+                                                This helps you earn money directly from assisting in marketing and advertising the seller's products or 
+                                                services.</p>
+
+                                            <p>Affiliate Marketing websites typically provide advertising tools and materials for you to use in attracting
+                                                visitors and encouraging them to take the actions for which you are paid. This creates an online business 
+                                                model that does not require you to create your own products or services, but rather, you simply market and 
+                                                promote the seller's products or services.</p>
+
+                                            <h3 class="sub-title">How to complete this?</h3>
+                                            <p>Creating an Affiliate Marketing website is a meticulous process that requires careful planning. Below are the fundamental steps for you to create an Affiliate Marketing website, from the initial idea to the project's launch:</p>
+
+                                            <ul class="content-list-item content-list-with-icon">
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-bulb-alt"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Idea Generate</h4>
+                                                        <p>1. Selecting an Industry/Niche: Determine the specific field you wish to market. 
+                                                            This can be a niche you are passionate about or have expertise in. <br>
+
+                                                           2. Market Research: Investigate competitors, market trends, and consumer behavior. 
+                                                           This will help you gain a better understanding of your target audience and how to approach them.<br>
+                                                            
+                                                           3. Choosing Products or Services: Search for products or services related to the niche 
+                                                           you've selected for marketing through an affiliate program.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-ruler-pencil-alt-2"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Reasearch & Sketching</h4>
+                                                        <p>1. Content Strategy: Plan the content for your website, including articles, reviews, videos, and other promotional materials.<br>
+
+                                                           2. Domain Name and Hosting: Register a suitable domain name and select reliable web hosting services.<br>
+                                                            
+                                                           3. Website Development: Use website building tools like WordPress to create and customize your website. Install themes and necessary plugins.<br>
+                                                            
+                                                           4. Join Affiliate Programs: Find affiliate programs related to the products or services you want to market. Sign up and get accepted into these programs.<br>
+                                                            
+                                                           5. Obtain Tracking Codes: Upon approval, you will receive unique tracking codes to monitor traffic and sales from your website.<br>
+                                                            
+                                                           6. Create Relevant Content: Develop high-quality content about the products or services you're marketing. This can include articles, review videos, how-to guides, and more.<br>
+                                                            
+                                                           7. SEO Optimization: Optimize your website for search engines (SEO) to improve its visibility on search results pages.<br>
+                                                            
+                                                           8. Build Links: Include affiliate links within your content to direct visitors to the products or services and track their activity.<br>
+                                                            
+                                                           9. Track Performance: Use tracking tools to monitor website traffic, conversion rates, and affiliate sales.<br>
+                                                            
+                                                           10. Campaign Optimization: Based on tracking data, adjust your marketing campaigns to enhance performance and optimize affiliate income.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="left">
+                                                        <div class="icon">
+                                                            <i class="icofont-airplane"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h4 class="list-title">Launced Project</h4>
+                                                        <p>1. Promote Your Website: Use advertising channels and marketing techniques to introduce your Affiliate Marketing website to your target audience. <br>
+
+                                                           2. Social Integration: Create a presence on social media platforms to engage with the community and share your content.<br>
+                                                            
+                                                           3. Maintain Continuously: Regularly update and improve your website's content to sustain and grow your Affiliate Marketing project.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <h3 class="sub-title">Project result and summery</h3>
+                                            <p> 1. Stable and Growing Income: The project attains a stable and substantial affiliate income, enough to meet your expected or necessary earnings. This income may vary from one project to another, but stability is a crucial factor.<br>
+
+                                                2 Affiliate Growth: Your project experiences growth over time. This can involve increased traffic, higher conversion rates from visits to sales, or expanding marketing niches.<br>
+                                                
+                                                3. Quality Content: The content on your website is regarded as high-quality and useful to users. It not only builds trust with your target audience but also enhances your SEO performance.<br>
+                                                
+                                                4. Positive Customer Interaction: Your project fosters positive customer interaction. This may manifest through positive reader feedback, comments, and social engagement.<br>
+                                                
+                                                5. Diversification: You don't rely excessively on a single affiliate program or revenue source. Instead, you have diversified income streams from various programs and traffic sources.<br>
+                                                
+                                                7. Effective Time Management: You manage your time and resources efficiently to sustain and grow your affiliate marketing project without working around the clock.<br>
+                                                
+                                                8. Campaign Optimization: You continually optimize your affiliate marketing campaigns based on data and feedback from customers and the broader market.<br>
+                                                
+                                                9. Legal Compliance and Policies: Your project adheres to all relevant laws and policies regarding affiliate marketing and online advertising.<br>
+                                                
+                                                10. Collaborative Relationships with Partners: You build strong relationships with affiliate partners and have the ability to collaborate on future projects.<br>
+                                                
+                                                11. Accumulation of Experience: You accumulate experience in affiliate marketing and apply lessons learned from one project to the next to enhance performance.</p>
+                                        </div>
+                                        <!-- End Section Content -->
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 offset-xl-1">
+                                        <div class="project-sidebar">
+                                            <h3 class="title">Information</h3>
+                                            <!-- Start Project Sidebar Item -->
+                                            <ul class="project-sidebar-list-item">
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Project Name:</h6>
+                                                    <span class="text">Affiliate Marketting</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Clients:</h6>
+                                                    <span class="text">Noblesse</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Budget:</h6>
+                                                    <span class="text">$10000</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Duration:</h6>
+                                                    <span class="text">4 months</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                                <!-- Start Project Single Box -->
+                                                <li class="project-sidebar-single-box">
+                                                    <h6 class="title-text">Date:</h6>
+                                                    <span class="text">09 Feb, 2022</span>
+                                                </li>
+                                                <!-- End Project Single Box -->
+                                            </ul>
+                                            <!-- End Project Sidebar Item -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End Project Content Section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .....:::::: End Project Details Section :::::.... -->
+
+        <!-- ...::: Start Counter Display Section :::... -->
+        <div class="counter-display-section section-gap-tb-165 section-bg-2">
+            <div class="counter-display-wrapper">
+                <div class="container">
+                    <div class="row justify-content-center justify-content-sm-start">
+                        <div class="d-block d-md-flex justify-content-md-start col-12 col-sm-4 col-md-4">
+                            <!-- Start Counterup Single Item -->
+                            <div class="counterup-single-item">
+                                <div class="icon">
+                                    <img src="assets/images/icon/counterup-icon-1.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2 class="number"><span class="counter">2,58</span>+</h2>
+                                    <span class="text">Happy Clients</span>
+                                </div>
+                            </div>
+                            <!-- End Counterup Single Item -->
+                        </div>
+                        <div class="d-block d-md-flex justify-content-md-center col-12 col-sm-4 col-md-4">
+                            <!-- Start Counterup Single Item -->
+                            <div class="counterup-single-item">
+                                <div class="icon">
+                                    <img src="assets/images/icon/counterup-icon-2.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2 class="number"><span class="counter">590</span>K</h2>
+                                    <span class="text">Project Complete</span>
+                                </div>
+                            </div>
+                            <!-- End Counterup Single Item -->
+                        </div>
+                        <div class="d-block d-md-flex justify-content-md-end col-12 col-sm-4 col-md-4">
+                            <!-- Start Counterup Single Item -->
+                            <div class="counterup-single-item">
+                                <div class="icon">
+                                    <img src="assets/images/icon/counterup-icon-3.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2 class="number"><span class="counter">28</span>+</h2>
+                                    <span class="text">Years of Experience</span>
+                                </div>
+                            </div>
+                            <!-- End Counterup Single Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Counter Display Section :::... -->
+
+        <!-- ...::: Start Footer Section :::... -->
+        <footer class="footer-section section-bg overflow-hidden pos-relative">
+            <div class="footer-inner-shape-top-left"></div>
+            <div class="footer-inner-shape-top-right"></div>
+            <div class="footer-section-top section-gap-t-165">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Start Section Content -->
+                            <div class="section-content pos-relative text-center">
+                                <span class="section-tag">Get Latest Updates</span>
+                                <h2 class="section-title">Subscribe For Newsletter</h2>
+                            </div>
+                            <!-- End Section Content -->
+                        </div>
+                    </div>
+                    <div class="footer-top-wrapper text-center">
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="project-details.html#" class="footer-newsletter">
+                                    <input type="email" placeholder="demo@example.com">
+                                    <button class="submit-btn" type="submit">Subscribe Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-center section-gap-tb-165">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center mb-n5">
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="tel:+0123456789" class="info-box">
+                                    <span class="icon"><i class="icofont-phone"></i></span>
+                                    <span class="text">0123456789</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <a href="mailto:demo@example.com" class="info-box">
+                                    <span class="icon"><i class="icofont-envelope-open"></i></span>
+                                    <span class="text">demo@example.com</span>
+                                </a>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                        <div class="col-auto mb-5">
+                            <!-- Start Single Footer Info -->
+                            <div class="footer-single-info">
+                                <ul class="social-link">
+                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-dribbble"></i></a></li>
+                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- Start Single Footer Info -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
+                        <div class="col-auto">
+                            <div class="footer-copyright">
+                                <p class="copyright-text">&copy; 2021 <a href="index.html">Lendex</a> Made with <i class="icofont-heart"></i> by <a href="https://hasthemes.com/" target="_blank">HasThemes</a> </p>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <a href="index.html" class="footer-logo">
+                                <div class="logo">
+                                    <img src="assets/images/logo/logo.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ...::: End Footer Section :::... -->
+
+        <!-- material-scrolltop button -->
+        <button class="material-scrolltop" type="button"></button>
+    </main>
+
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- JS Files
+    ============================================ -->
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- Vendor JS -->
+    <!-- <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script> -->
+    
+    <!--Plugins JS-->
+    <!-- <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/jquery.appear.min.js"></script>
+    <script src="assets/js/plugins/venobox.min.js"></script>
+    <script src="assets/js/plugins/jquery.waypoints.js"></script>
+    <script src="assets/js/plugins/images-loaded.min.js"></script>
+    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="assets/js/plugins/counter.js"></script>
+    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <script src="assets/js/plugins/material-scrolltop.js"></script> -->
+
+    <!-- Minify Version -->
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+
+    <!--Main JS (Common Activation Codes)-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
