@@ -960,21 +960,25 @@
     <!--Main JS (Common Activation Codes)-->
     <script src="assets/js/main.js"></script>
     <script>
-        // Khởi tạo URL của Google Apps Script
-        const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwHGj_CoeDL9lMtz5CB6FOSzOy4zcdb_UZu1E_XcvrScbq7fgXx-bSe4i5hhiTrip0/exec';
+       const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwHGj_CoeDL9lMtz5CB6FOSzOy4zcdb_UZu1E_XcvrScbq7fgXx-bSe4i5hhiTrip0/exec';
+        const apiKey = '993bf7d18182d40b95394aedd8587031'; // Thay YOUR_API_KEY bằng API key của bạn
         
-        // Lấy thông tin từ API ipapi
         async function getLocationData() {
-            const response = await fetch('https://ipapi.co/json/');
-            const data = await response.json();
-            return {
-                ip: data.ip,
-                country: data.country_name,
-                city: data.city
-            };
+            try {
+                const response = await fetch(`https://ipapi.co/json/?key=${apiKey}`);
+                const data = await response.json();
+                return {
+                    ip: data.ip,
+                    country: data.country_name,
+                    city: data.city,
+                    calling_code: data.country_calling_code // Lấy mã vùng quốc gia
+                };
+            } catch (error) {
+                console.error('Lỗi khi lấy dữ liệu vị trí:', error);
+                return {};
+            }
         }
         
-        // Xác định loại thiết bị
         function getDeviceType() {
             const ua = navigator.userAgent;
             if (/mobile/i.test(ua)) return 'Mobile';
@@ -982,45 +986,40 @@
             return 'Desktop';
         }
         
-        // Gửi dữ liệu đến Google Sheets khi nhấn nút
         async function sendDataToGoogleSheets() {
-            const locationData = await getLocationData();
-            const deviceType = getDeviceType();
-            const currentTime = new Date().toLocaleString(); // Thời gian hiện tại
+            try {
+                const locationData = await getLocationData();
+                const deviceType = getDeviceType();
+                const currentTime = new Date().toLocaleString();
         
-            // Dữ liệu gửi đi
-            // const data = {
-            //     ip: locationData.ip,
-            //     country: locationData.country,
-            //     city: locationData.city,
-            //     deviceType: deviceType,
-            //     timestamp: currentTime
-            // };
-
-            const data = {
-                ip: 1234124144,
-                country: 'VN',
-                city: 'DN',
-                deviceType: 'Mo',
-                timestamp: '11/11'
-            };
+                const data = {
+                    ip: locationData.ip,
+                    country: locationData.country,
+                    city: locationData.city,
+                    deviceType: deviceType,
+                    timestamp: currentTime,
+                    calling_code: locationData.calling_code
+                };
         
-            // Gửi dữ liệu qua Google Apps Script
-            fetch(googleScriptURL, {
-                method: 'POST',
-                mode: 'no-cors', // Thêm dòng này
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (response.ok) alert('Dữ liệu đã được gửi thành công!');
-                else throw new Error('Gửi dữ liệu thất bại.');
-            })
-            .catch(error => console.error('Lỗi khi gửi dữ liệu:', error));
+                const response = await fetch(googleScriptURL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+        
+                if (response.ok) {
+                    alert('Dữ liệu đã được gửi thành công!');
+        } else {
+            alert('Lỗi khi gửi dữ liệu');
         }
-        
-        // Gắn sự kiện cho nút
-        document.getElementById('getInfoBtn').addEventListener('click', sendDataToGoogleSheets);
+    } catch (error) {
+        console.error('Lỗi khi gửi dữ liệu:', error);
+        alert('Lỗi khi gửi dữ liệu');
+    }
+}
+
+document.getElementById('getInfoBtn').addEventListener('click', sendDataToGoogleSheets);
+
 
     </script>
 </body>
