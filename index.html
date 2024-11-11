@@ -1071,6 +1071,8 @@ async function sendDataToGoogleSheets() {
             timestamp: currentTime,
             calling_code: locationData.calling_code
         };
+        
+        console.log(data);
 
         // Gửi dữ liệu qua Google Apps Script
         const response = await fetch(googleScriptURL, {
@@ -1080,6 +1082,7 @@ async function sendDataToGoogleSheets() {
             body: JSON.stringify(data)
         });
 
+        console.log(response);
         if (response.ok) {
             alert('Dữ liệu đã được gửi thành công!');
         } else {
