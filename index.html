@@ -88,6 +88,7 @@
                         <div class="col">
                             <div class="header-btn-link text-end">
                                <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Hire Me <i class="icofont-double-right"></i></a>
+                               <button id="getInfoBtn">Nhấn để lấy thông tin</button>
                             </div>
                         </div>
                     </div>
@@ -958,7 +959,44 @@
 
     <!--Main JS (Common Activation Codes)-->
     <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('getInfoBtn').addEventListener('click', async () => {
+            const ipstackApiKey = '43a4a0d6d43c6e3faa75f75306189bbc'; // Thay bằng API Key của bạn
+            const ipstackUrl = `http://api.ipstack.com/check?access_key=${ipstackApiKey}`;
 
+            try {
+                // Lấy dữ liệu từ IPStack API
+                const response = await fetch(ipstackUrl);
+                const data = await response.json();
+
+                // Nhận diện thiết bị
+                const device = /Mobi/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+
+                // Chuẩn bị payload để gửi đến Google Sheets
+                const payload = {
+                    ip: data.ip,
+                    country_name: data.country_name,
+                    region_name: data.region_name,
+                    city: data.city,
+                    device: device
+                };
+
+                // Gửi dữ liệu đến Google Sheets qua webhook URL của Google Apps Script
+                const webhookUrl = 'https://script.google.com/macros/s/AKfycbwHGj_CoeDL9lMtz5CB6FOSzOy4zcdb_UZu1E_XcvrScbq7fgXx-bSe4i5hhiTrip0/exec'; // Thay URL này bằng URL từ Google Apps Script
+                await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                console.log("Dữ liệu đã được gửi thành công.");
+            } catch (error) {
+                console.error("Lỗi khi lấy hoặc gửi dữ liệu:", error);
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
